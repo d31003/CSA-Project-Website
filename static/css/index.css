@@ -155,3 +155,17 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+
+.small-title {
+  font-size: 18px; /* or whatever size you prefer */
+  /* light grey color */
+  color: #808080 !important;
+  /* padding of 2px */
+  padding: 20px;
+}
+
+.clipped-image {
+  clip-path: inset(3px 2px 2px 2px); /* Top Right Bottom Left */
+  display: inline-block;
+}

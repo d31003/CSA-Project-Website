@@ -45,7 +45,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">ALT-Pilot: Autonomous navigation with Language augmented Topometric mapss</h1>
+          <h1 class="title is-1 publication-title">ALT-Pilot: Autonomous navigation with Language augmented Topometric maps</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://keunhong.com">Mohammad Omama</a><sup>1</sup>,</span>
@@ -83,7 +83,7 @@
               <!-- PDF Link. -->
               <span class="link-block">
                 <a href="https://arxiv.org/pdf/2011.12948"
-                   class="external-link button is-normal is-rounded is-dark">
+                   class="external-link button is-normal is-rounded is-dark" disabled="true">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
@@ -92,7 +92,7 @@
               </span>
               <span class="link-block">
                 <a href="https://arxiv.org/abs/2011.12948"
-                   class="external-link button is-normal is-rounded is-dark">
+                   class="external-link button is-normal is-rounded is-dark" disabled="true">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
@@ -102,7 +102,7 @@
               <!-- Video Link. -->
               <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
+                   class="external-link button is-normal is-rounded is-dark" disabled="true">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
                   </span>
@@ -112,7 +112,7 @@
               <!-- Code Link. -->
               <span class="link-block">
                 <a href="https://github.com/google/nerfies"
-                   class="external-link button is-normal is-rounded is-dark">
+                   class="external-link button is-normal is-rounded is-dark" disabled="true">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
@@ -137,7 +137,7 @@
     </div>
   </div> -->
   <!-- Paper video. -->
-  <div class="columns is-centered has-text-centered">
+  <!-- <div class="columns is-centered has-text-centered">
     <div class="column is-7">
       <div class="publication-video">
         <iframe src="https://www.youtube.com/embed/2VMfZisFcQ0?si=pazj2WRg_Wz70NZz;showinfo=0"
@@ -145,67 +145,47 @@
       </div>
     </div>
   </div>
-  <!--/ Paper video. -->
+  / Paper video. -->
 
 </section>
 
 
-<!-- <section class="hero is-light is-small">
+<section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
+        <div class="item">
+          <img  class="clipped-image" src="./static/images/users-add-lm.png" alt="teaser" height="100%" >
+          <div class="title small-title">
+            [1] We allow users to augment  topometric maps by clicking anywhere on the map and adding a language-only landmark – a brief text tag
+        describing a distinct static object in the scene, such as a street sign or a roundabout. 
+          </div>
         </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
+        <div class="item">
+          <img class="clipped-image" src="./static/images/multimodal-loc.png" alt="teaser" height="100%" >
+          <div class="title small-title">
+              [2] At the core of ALT-Pilot is a probabilistic multimodal localization algorithm that bridges LiDAR, image, and language to estimate a posterior distribution of vehicle poses in the map frame
+            (top-right). This allows us to account for erroneously specified landmarks, and provides a global localization estimate useful for route
+            (global) planning, which we couple with onboard sensors and perception for trajectory planning and control. 
+          </div>
         </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
+        <div class="item">
+          <img class="clipped-image" src="./static/images/unc-pro.png" alt="teaser" height="100%" >
+          <div class="title small-title">
+          [3] From the uncertainty profile plot, notice how ALT-Pilot is more certain over the entire trajectory; compared to Maplite, a state-of-the-art topometric navigation
+        approach for AD. 
         </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
         </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
+        <div class="item">
+          <img class="clipped-image" src="./static/images/lang-nav.png" alt="teaser" height="100%" >
+          <div class="title small-title">
+          [4] Additionally, the language-augmented maps enable navigating to open-vocabulary goals specified as text queries.
+          </div> 
         </div>
       </div>
     </div>
   </div>
-</section> -->
+</section>
 
 
 <section class="section">
@@ -240,7 +220,7 @@
     <!--/ Abstract. -->
 
     <!-- Paper video. -->
-    <!-- <div class="columns is-centered has-text-centered">
+    <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
@@ -248,24 +228,8 @@
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
-    </div> -->
-    <div class="hero-body">
-      <center><img src="./static/images/alt-pilot-splash-krishna.png" alt="teaser" width="100%" ></center>
-      <h3>
-        <b>ALT-Pilot</b>  enables navigating to any point on a road network specified via a GPS waypoint, map click, or language prompt without
-        assuming a HD map of the environment, relying instead on crowdsourced topometric maps like OpenStreetMap (OSM). Left to right: We
-        allow users to augment these topometric maps by clicking anywhere on the map and adding a language-only landmark – a brief text tag
-        describing a distinct static object in the scene, such as a street sign or a roundabout. At the core of ALT-Pilot is a probabilistic multimodal
-        localization algorithm that bridges LiDAR, image, and language to estimate a posterior distribution of vehicle poses in the map frame
-        (top-right). This allows us to account for erroneously specified landmarks, and provides a global localization estimate useful for route
-        (global) planning, which we couple with onboard sensors and perception for trajectory planning and control. From the uncertainty profile
-        plot, notice how ALT-Pilot is more certain over the entire trajectory; compared to Maplite, a state-of-the-art topometric navigation
-        approach for AD. Additionally, the language-augmented maps enable navigating to open-vocabulary goals specified as text queries.
-      </h3>
     </div>
-  </div>
-    <!--/ Paper video. -->
-  </div>
+   
 
 </section>
 
@@ -273,12 +237,12 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX | ToBeAdded</h2>
-    <pre><code>@article{park2021nerfies,
+    <!-- <pre><code>@article{park2021nerfies,
   author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
   title     = {Nerfies: Deformable Neural Radiance Fields},
   journal   = {ICCV},
   year      = {2021},
-}</code></pre>
+}</code></pre> -->
   </div>
 </section>
 
