@@ -169,3 +169,14 @@ body {
   clip-path: inset(3px 2px 2px 2px); /* Top Right Bottom Left */
   display: inline-block;
 }
+
+
+.clipped-splash1 {
+  clip-path: inset(25px 4px 55px 2px); /* Top Right Bottom Left */
+  display: inline-block;
+}
+
+.clipped-splash2 {
+  clip-path: inset(5px 0px 20px 0px); /* Top Right Bottom Left */
+  display: inline-block;
+}
