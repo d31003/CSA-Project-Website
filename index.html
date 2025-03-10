@@ -8,9 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CSA: Canonical Similarity Analysis</title>
 
-  <!-- <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet"> -->
+  <!-- Link to the favicon for the browser tab -->
+  <link rel="icon" href="./static/images/favicon.ico" type="image/x-icon">
+
   <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="stylesheet" href="./static/css/index.css"> -->
   <style>
   section .container h2 {
     text-align: center;
@@ -44,11 +46,14 @@
               <span class="icon">
                 <svg class="svg-inline--fa fa-file-pdf fa-w-12" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file-pdf" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-12.2-33.3-29-42.7-53.8 4.5-18.5 11.6-46.6 6.2-64.2-4.7-29.4-42.4-26.5-47.8-6.8-5 18.3-.4 44.1 8.1 77-11.6 27.6-28.7 64.6-40.8 85.8-.1 0-.1.1-.2.1-27.1 13.9-73.6 44.5-54.5 68 5.6 6.9 16 10 21.5 10 17.9 0 35.7-18 61.1-61.8 25.8-8.5 54.1-19.1 79-23.2 21.7 11.8 47.1 19.5 64 19.5 29.2 0 31.2-32 19.7-43.4-13.9-13.6-54.3-9.7-73.6-7.2zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-74.1 255.3c4.1-2.7-2.5-11.9-42.8-9 37.1 15.8 42.8 9 42.8 9z"></path></svg><!-- <i class="fas fa-file-pdf"></i> Font Awesome fontawesome.com -->
             </span>
-              <span>OpenReview</span>
+              <span>OpenReview (ICLR 2025 Accepted)</span>
             </a>
           </span>
           <span class="link-block">
             <a href="https://arxiv.org/abs/2410.07610" class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                <svg class="svg-inline--fa fa-file-pdf fa-w-12" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file-pdf" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-12.2-33.3-29-42.7-53.8 4.5-18.5 11.6-46.6 6.2-64.2-4.7-29.4-42.4-26.5-47.8-6.8-5 18.3-.4 44.1 8.1 77-11.6 27.6-28.7 64.6-40.8 85.8-.1 0-.1.1-.2.1-27.1 13.9-73.6 44.5-54.5 68 5.6 6.9 16 10 21.5 10 17.9 0 35.7-18 61.1-61.8 25.8-8.5 54.1-19.1 79-23.2 21.7 11.8 47.1 19.5 64 19.5 29.2 0 31.2-32 19.7-43.4-13.9-13.6-54.3-9.7-73.6-7.2zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-74.1 255.3c4.1-2.7-2.5-11.9-42.8-9 37.1 15.8 42.8 9 42.8 9z"></path></svg><!-- <i class="fas fa-file-pdf"></i> Font Awesome fontawesome.com -->
+              </span>
               <span>arXiv</span>
             </a>
           </span>
@@ -97,39 +102,49 @@
       <img src="./static/images/CSA_system_graph.png" alt="System Framework" style="width:80%">
     </div>
   </section>
-  
-  <section class="section">
-    <div class="container">
-      <h2 class="title is-3">Pipeline</h2>
-      <img src="./static/images/csa_pipeline.png" alt="CSA Pipeline" style="width:100%">
-    </div>
-  </section>
 
   <section class="section">
     <div class="container">
       <h2 class="title is-3">Experiments</h2>
-      <p>CSA surpasses CLIP in efficiency, using pre-trained unimodal encoders to map features with remarkable data efficiency.</p>
-      <img src="./static/images/csa_results.png" alt="CSA Results" style="width:100%">
+      <p>CSA outperforms CLIP in efficiency by using pre-trained unimodal encoders to map features with exceptional data efficiency—50,000 times more efficient than CLIP. We showcase CSA's effectiveness in tasks like zero-shot classification and misinformation detection, achieving performance on par with CLIP.</p>
+      <img src="./static/images/imagenet.png" alt="ImageNet results" style="width:60%">
+      <br>
+      <img src="./static/images/COSMOS.png" alt="COSMOS results" style="width:60%">
     </div>
   </section>
 
+  <section class="section">
+    <div class="container">
+      <h2 class="title is-3">Towards More Modalities</h2>
+      <!-- <p>
+        CSA is not limited to image and text modalities. It can be extended to other modality pairs such as lidar and text, audio, and time series, and more. By leveraging pre-trained unimodal encoders for these modalities, CSA can efficiently map features into a shared multimodal space, enabling robust cross-modal understanding and retrieval. Check out our paper for more details.
+      </p> -->
+      <p>
+        CSA is not limited to <span style="font-weight: bold; color: #007bff;">image and text</span> modalities. It can be extended to other modality pairs such as <span style="font-weight: bold; color: #007bff;">lidar and text</span>, <span style="font-weight: bold; color: #007bff;">audio</span>, and <span style="font-weight: bold; color: #007bff;">time series</span>, and more. By leveraging pre-trained unimodal encoders for these modalities, CSA can efficiently map features into a shared multimodal space, enabling robust cross-modal understanding and retrieval. Check out our paper for more details.
+      </p>      
+      <br>
+      <!-- <div style="display: flex; justify-content: space-between; gap: 20px;">
+      <img src="./static/images/timeseries_classification.png" alt="More Modalities (time series)">
+      <img src="./static/images/lidar.png" alt="More Modalities (lidar)">
+      </div> -->
+      <!-- <img src="./static/images/lidar.png" alt="More Modalities (lidar)" style="width:20%"> -->
+    </div>
+  </section>
 
   <div class="container is-max-desktop content" style="text-align: left;">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@inproceedings{
-      li2025csa,
-      title={{CSA}: Data-efficient Mapping of Unimodal Features to Multimodal Features},
-      author={Po-han Li and Sandeep P. Chinchali and Ufuk Topcu},
-      booktitle={The Thirteenth International Conference on Learning Representations},
-      year={2025},
-      url={https://openreview.net/forum?id=6Mg7pjG7Sw}
-}
-    </code></pre>
+    <pre><code>@inproceedings{li2025csa,
+  title={{CSA}: Data-efficient Mapping of Unimodal Features to Multimodal Features},
+  author={Po-han Li and Sandeep P. Chinchali and Ufuk Topcu},
+  booktitle={The Thirteenth International Conference on Learning Representations},
+  year={2025},
+  url={https://openreview.net/forum?id=6Mg7pjG7Sw}
+}</code></pre>
   </div>
 
   <footer class="footer">
     <div class="content has-text-centered">
-      <p>Website template borrowed from <a href="""https://nerfies.github.io/">Nerfies</a>. Licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</p>
+      <p>Website template borrowed from <a href="https://nerfies.github.io/">Nerfies</a>. Licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</p>
     </div>
   </footer>
 </body>
