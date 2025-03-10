@@ -12,16 +12,21 @@
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <style>
-    .hero-body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh; /* Adjust the height to fit the viewport */
-      text-align: center;
-    }
-    .container {
-      text-align: center; /* Ensure the content is centered horizontally */
-    }
+  section .container h2 {
+    text-align: center;
+  }
+  section .container p {
+    margin-left: auto;
+    margin-right: auto; /* Center the container */
+    text-align: left; /* Center the body text */
+    width: 60%; /* Adjust width as needed */
+  }
+  section .container img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%; /* Adjust width as needed */
+  }
   </style>
 </head>
 
@@ -89,7 +94,7 @@
         The CSA framework consists of two main components: unimodal encoders and a similarity analysis module. The unimodal encoders independently process different modalities, such as images and text, to extract feature representations. These features are then mapped into a shared multimodal space using the similarity analysis module (canonical similarity analysis). It then employs a similarity score, just like how CLIP does, retain only the relevant multimodal information among the modalities.
       </p>
       <br>
-      <img src="./static/images/CSA_system_graph.png" alt="System Framework" style="width:100%">
+      <img src="./static/images/CSA_system_graph.png" alt="System Framework" style="width:80%">
     </div>
   </section>
   
