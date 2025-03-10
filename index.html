@@ -81,14 +81,14 @@
     <div class="container">
       <h2 class="title is-3">Abstract</h2>
       <p>
-        Multimodal encoders like CLIP excel in tasks such as zero-shot image classification and cross-modal retrieval. However, they require excessive training data.
-        We propose canonical similarity analysis (CSA), which uses two unimodal encoders to replicate multimodal encoders using limited data.
+        Multimodal encoders like CLIP excel in tasks such as <span style="font-weight: bold; color: #185f9e;">zero-shot image classification</span> and <span style="font-weight: bold; color: #185f9e;">cross-modal retrieval</span>. However, they require excessive training data.
+        We propose <span style="font-weight: bold; color: #185f9e;">canonical similarity analysis (CSA)</span>, which uses two <span style="font-weight: bold; color: #185f9e;">unimodal encoders</span> to replicate <span style="font-weight: bold; color: #185f9e;">multimodal encoders</span> using limited data.
         CSA maps unimodal features into a multimodal space, using a new similarity score to retain only the multimodal information.
         CSA only involves the inference of unimodal encoders and a cubic-complexity matrix decomposition, eliminating the need for extensive GPU-based model training.
-        Experiments show that CSA outperforms CLIP while requiring 50,000 times fewer multimodal data pairs to bridge the modalities given pre-trained unimodal encoders on ImageNet classification and misinformative news caption detection.
+        Experiments show that CSA outperforms CLIP while requiring <span style="font-weight: bold; color: #185f9e;">50,000 times fewer multimodal data pairs</span> to bridge the modalities given pre-trained unimodal encoders on <span style="font-weight: bold; color: #185f9e;">ImageNet classification</span> and <span style="font-weight: bold; color: #185f9e;">misinformative news caption detection</span>.
         CSA surpasses the state-of-the-art method to map unimodal features to multimodal features.
         We also demonstrate the ability of CSA with modalities beyond image and text, paving the way for future modality pairs with limited paired multimodal data but abundant unpaired unimodal data, such as lidar and text.
-      </p>
+      </p>      
     </div>
   </section>
 
@@ -120,7 +120,7 @@
         CSA is not limited to image and text modalities. It can be extended to other modality pairs such as lidar and text, audio, and time series, and more. By leveraging pre-trained unimodal encoders for these modalities, CSA can efficiently map features into a shared multimodal space, enabling robust cross-modal understanding and retrieval. Check out our paper for more details.
       </p> -->
       <p>
-        CSA is not limited to <span style="font-weight: bold; color: #007bff;">image and text</span> modalities. It can be extended to other modality pairs such as <span style="font-weight: bold; color: #007bff;">lidar and text</span>, <span style="font-weight: bold; color: #007bff;">audio</span>, and <span style="font-weight: bold; color: #007bff;">time series</span>, and more. By leveraging pre-trained unimodal encoders for these modalities, CSA can efficiently map features into a shared multimodal space, enabling robust cross-modal understanding and retrieval. Check out our paper for more details.
+        CSA is not limited to <span style="font-weight: bold; color: #185f9e;">image and text</span> modalities. It can be extended to other modality pairs such as <span style="font-weight: bold; color: #185f9e;">lidar and text</span>, <span style="font-weight: bold; color: #185f9e;">audio</span>, and <span style="font-weight: bold; color: #185f9e;">time series</span>, and more. By leveraging pre-trained unimodal encoders for these modalities, CSA can efficiently map features into a shared multimodal space, enabling robust cross-modal understanding and retrieval. Check out our paper for more details.
       </p>      
       <br>
       <!-- <div style="display: flex; justify-content: space-between; gap: 20px;">
