@@ -3,353 +3,130 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Autonomous navigation with Language augmented Topometric maps">
-  <meta name="keywords" content="Navigation, Self-Driving, CLIP, Multimodal, Localization">
+  <meta name="description" content="CSA: Data-Efficient Mapping of Unimodal Features to Multimodal Features">
+  <meta name="keywords" content="Multimodal Learning, Canonical Similarity Analysis, CLIP, Machine Learning">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ALT-Pilot</title>
+  <title>CSA: Canonical Similarity Analysis</title>
 
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'G-PYVRSFMDRL');
-  </script>
-
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
-
+  <!-- <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet"> -->
   <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.png">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
+  <style>
+    .hero-body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Adjust the height to fit the viewport */
+      text-align: center;
+    }
+    .container {
+      text-align: center; /* Ensure the content is centered horizontally */
+    }
+  </style>
 </head>
 
 <body>
-
   <section class="hero">
     <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">ALT-Pilot: Autonomous navigation with Language augmented Topometric
-              maps</h1>
-            <div class="is-size-5 publication-authors">
-              <span class="author-block">
-                <a href="https://mohdomama.github.io/">Mohammad Omama</a><sup>1</sup>,</span>
-              <span class="author-block">
-                <a href="https://www.linkedin.com/in/reach-pranjal/">Pranjal Paul</a><sup>*2</sup>,
-              </span>
-              <span class="author-block">
-                <a href="https://scholar.google.com/citations?user=1K8EuVEAAAAJ&hl=en">Pranav Inani</a><sup>*2</sup>,</span>
-              
-              <span class="author-block">
-                <a href="https://www.linkedin.com/in/sarat-chandra-yellapragada-765b21207/">Sarat Chandra Yellapragada</a><sup>2</sup>,
-              </span>
-              <span class="author-block">
-                <a href="https://krrish94.github.io/">Krishna Murthy Jatavallabhula</a><sup>†3</sup>,
-              </span>
-              <span class="author-block">
-                <a href="https://www.ece.utexas.edu/people/faculty/sandeep-chinchali">Sandeep Chinchali</a><sup>†1</sup>,
-              </span>
-              <span class="author-block">
-                <a href="https://www.iiit.ac.in/people/faculty/mkrishna/">Madhava Krishna</a><sup>†2</sup>
-              </span>
-            </div>
+      <div class="container has-text-centered">
+        <h1 class="title is-1">CSA: Data-Efficient Mapping of Unimodal Features to Multimodal Features</h1>
+        <h2 class="subtitle is-4">Po-han Li, Sandeep Chinchali, Ufuk Topcu</h2>
+        <h3 class="subtitle is-5">The University of Texas at Austin</h3>
 
-            <div class="is-size-5 publication-authors">
-              <span class="author-block"><sup>1</sup>The University of Texas at Austin</span>
-              <span class="author-block"><sup>2</sup>International Institute of Information Technology</span>
-              <span class="author-block"><sup>3</sup>Massachusetts Institute of Technology</span>
-            </div>
-            <div class="is-size-5 publication-authors">
-              <span class="author-block" style="font-size:0.7em; "> <i><sup>*</sup>Co-second Authors</i> </span>
-              <span class="author-block" style="font-size:0.7em; "> <i><sup>†</sup> Equal Advising</i> </span>
-            </div>
-
-            <div class="column has-text-centered">
-              <div class="publication-links">
-                <!-- PDF Link. -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/pdf/2310.02324.pdf" class="external-link button is-normal is-rounded is-dark"
-                    >
-                    <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                    </span>
-                    <span>Paper</span>
-                  </a>
-                </span>
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/2310.02324" class="external-link button is-normal is-rounded is-dark"
-                    >
-                    <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                    </span>
-                    <span>arXiv</span>
-                  </a>
-                </span>
-                <!-- Video Link. -->
-                <span class="link-block">
-                  <a href="https://youtu.be/sw7MuZs1q-0"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                    </span>
-                    <span>Video</span>
-                  </a>
-                </span>
-                <!-- Code Link. -->
-                <span class="link-block">
-                  <a href="" class="external-link button is-normal is-rounded is-dark"
-                    disabled="true">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code (Coming Soon!)</span>
-                  </a>
-                </span>
-              </div>
-            </div>
-          </div>
+        <div class="publication-links">
+          <span class="link-block">
+            <a href="https://openreview.net/forum?id=6Mg7pjG7Sw&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DICLR.cc%2F2025%2FConference%2FAuthors%23your-submissions)" class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                <svg class="svg-inline--fa fa-file-pdf fa-w-12" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file-pdf" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-12.2-33.3-29-42.7-53.8 4.5-18.5 11.6-46.6 6.2-64.2-4.7-29.4-42.4-26.5-47.8-6.8-5 18.3-.4 44.1 8.1 77-11.6 27.6-28.7 64.6-40.8 85.8-.1 0-.1.1-.2.1-27.1 13.9-73.6 44.5-54.5 68 5.6 6.9 16 10 21.5 10 17.9 0 35.7-18 61.1-61.8 25.8-8.5 54.1-19.1 79-23.2 21.7 11.8 47.1 19.5 64 19.5 29.2 0 31.2-32 19.7-43.4-13.9-13.6-54.3-9.7-73.6-7.2zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-74.1 255.3c4.1-2.7-2.5-11.9-42.8-9 37.1 15.8 42.8 9 42.8 9z"></path></svg><!-- <i class="fas fa-file-pdf"></i> Font Awesome fontawesome.com -->
+            </span>
+              <span>OpenReview</span>
+            </a>
+          </span>
+          <span class="link-block">
+            <a href="https://arxiv.org/abs/2410.07610" class="external-link button is-normal is-rounded is-dark">
+              <span>arXiv</span>
+            </a>
+          </span>
+          <span class="link-block">
+            <a href="https://github.com/UTAustin-SwarmLab/Multi-modal-Data-Alignment" class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                <svg class="svg-inline--fa fa-github fa-w-16" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg><!-- <i class="fab fa-github"></i> Font Awesome fontawesome.com -->
+            </span>
+              <span>Code</span>
+            </a>
+          </span>
+          <span class="link-block">
+            <a href="https://utaustin-swarmlab.github.io/2025/01/24/CSA.html" class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                <svg class="svg-inline--fa fa-images fa-w-18" aria-hidden="true" focusable="false" data-prefix="far" data-icon="images" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M480 416v16c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V176c0-26.51 21.49-48 48-48h16v48H54a6 6 0 0 0-6 6v244a6 6 0 0 0 6 6h372a6 6 0 0 0 6-6v-10h48zm42-336H150a6 6 0 0 0-6 6v244a6 6 0 0 0 6 6h372a6 6 0 0 0 6-6V86a6 6 0 0 0-6-6zm6-48c26.51 0 48 21.49 48 48v256c0 26.51-21.49 48-48 48H144c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h384zM264 144c0 22.091-17.909 40-40 40s-40-17.909-40-40 17.909-40 40-40 40 17.909 40 40zm-72 96l39.515-39.515c4.686-4.686 12.284-4.686 16.971 0L288 240l103.515-103.515c4.686-4.686 12.284-4.686 16.971 0L480 208v80H192v-48z"></path></svg><!-- <i class="far fa-images"></i> Font Awesome fontawesome.com -->
+            </span>
+              <span>Blog</span>
+            </a>
+          </span>
         </div>
       </div>
-  </section>
+    </div>
 
-
-
-
-  <section class="section" style="width:90%; margin:auto; padding-bottom: 0; margin-bottom: 0; height: auto;">
-    <div class="columns is-centered">
-
-      <div class="column content">
-        <center>
-          <h2 class="title is-3">Language Augmented Topometric Maps</h2>
-          <div class="interpolation-image-wrapper-zero-shot">
-            <img class="clipped-splash1" src="./static/images/Gif1.gif" width="90%" />
-          </div>
-        </center>
-      </div>
-      <div class="column content">
-        <center>
-          <h2 class="title is-3">Multimodal Localization</h2>
-          <div class="interpolation-image-wrapper-fine-grained">
-            <img class="clipped-splash2" src="./static/images/Screenshot 2023-10-02 at 3.06.00 PM.png" width="90%" />
-          </div>
-        </center>
-
-      </div>
+  </span><section class="section">
+    <div class="container">
+      <h2 class="title is-3">Abstract</h2>
+      <p>
+        Multimodal encoders like CLIP excel in tasks such as zero-shot image classification and cross-modal retrieval. However, they require excessive training data.
+        We propose canonical similarity analysis (CSA), which uses two unimodal encoders to replicate multimodal encoders using limited data.
+        CSA maps unimodal features into a multimodal space, using a new similarity score to retain only the multimodal information.
+        CSA only involves the inference of unimodal encoders and a cubic-complexity matrix decomposition, eliminating the need for extensive GPU-based model training.
+        Experiments show that CSA outperforms CLIP while requiring 50,000 times fewer multimodal data pairs to bridge the modalities given pre-trained unimodal encoders on ImageNet classification and misinformative news caption detection.
+        CSA surpasses the state-of-the-art method to map unimodal features to multimodal features.
+        We also demonstrate the ability of CSA with modalities beyond image and text, paving the way for future modality pairs with limited paired multimodal data but abundant unpaired unimodal data, such as lidar and text.
+      </p>
     </div>
   </section>
-
-  
-
-  <!-- Horizontal line with width 80% -->
-  <hr style="width:80%; margin:auto; padding-bottom: 0; margin-bottom: 0; height: 1px; background-color: #e5e5e5;" />
-
 
   <section class="section">
-    <div class="container is-max-desktop">
-      <!-- Abstract. -->
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Abstract</h2>
-          <div class="content has-text-justified">
-            <p>
-              We present an autonomous navigation system
-              that operates without assuming HD LiDAR maps of the
-              environment. Our system, ALT-Pilot, relies only on publicly
-              available road network information and a sparse (and noisy)
-              set of crowdsourced language landmarks. With the help of
-              onboard sensors and a language-augmented topometric map,
-              ALT-Pilot autonomously pilots the vehicle to any destination
-              on the road network. We achieve this by leveraging vision-
-              language models pre-trained on web-scale data to identify
-              potential landmarks in a scene, incorporating vision-language
-              features into the recursive Bayesian state estimation stack to
-              generate global (route) plans, and a reactive trajectory planner
-              and controller operating in the vehicle frame. We implement
-              and evaluate ALT-Pilot in simulation and on a real, full-scale
-              autonomous vehicle and report improvements over state-of-
-              the-art topometric navigation systems by a factor of 3× on
-              localization accuracy and 5× on goal reachability.
-            </p>
-          </div>
-        </div>
-      </div>
-      <!--/ Abstract. -->
-
+    <div class="container">
+      <h2 class="title is-3">CSA Framework</h2>
+      <p>
+        The CSA framework consists of two main components: unimodal encoders and a similarity analysis module. The unimodal encoders independently process different modalities, such as images and text, to extract feature representations. These features are then mapped into a shared multimodal space using the similarity analysis module (canonical similarity analysis). It then employs a similarity score, just like how CLIP does, retain only the relevant multimodal information among the modalities.
+      </p>
+      <br>
+      <img src="./static/images/CSA_system_graph.png" alt="System Framework" style="width:100%">
+    </div>
+  </section>
+  
+  <section class="section">
+    <div class="container">
+      <h2 class="title is-3">Pipeline</h2>
+      <img src="./static/images/csa_pipeline.png" alt="CSA Pipeline" style="width:100%">
+    </div>
   </section>
 
-
-
-
-
-
-
-  <center>
-    <h2 class="title is-3">ALT-Pilot: Pipeline</h2>
-  </center><br>
-  <section class="hero is-light is-small">
-    <div class="hero-body">
-      <div class="container">
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="item">
-            <img class="clipped-image" src="./static/images/users-add-lm.png" alt="teaser" height="100%">
-            <div class="title small-title">
-              [1] We allow users to augment topometric maps by clicking anywhere on the map and adding a language-only
-              landmark – a brief text tag
-              describing a distinct static object in the scene, such as a street sign or a roundabout.
-            </div>
-          </div>
-          <div class="item">
-            <img class="clipped-image" src="./static/images/multimodal-loc.png" alt="teaser" height="100%">
-            <div class="title small-title">
-              [2] At the core of ALT-Pilot is a probabilistic multimodal localization algorithm that bridges LiDAR,
-              image, and language to estimate a posterior distribution of vehicle poses in the map frame
-              (top-right). This allows us to account for erroneously specified landmarks, and provides a global
-              localization estimate useful for route
-              (global) planning, which we couple with onboard sensors and perception for trajectory planning and
-              control.
-            </div>
-          </div>
-          <div class="item">
-            <img class="clipped-image" src="./static/images/unc-pro.png" alt="teaser" height="100%">
-            <div class="title small-title">
-              [3] From the uncertainty profile plot, notice how ALT-Pilot is more certain over the entire trajectory;
-              compared to Maplite, a state-of-the-art topometric navigation
-              approach for AD.
-            </div>
-          </div>
-          <div class="item">
-            <img class="clipped-image" src="./static/images/lang-nav.png" alt="teaser" height="100%">
-            <div class="title small-title">
-              [4] Additionally, the language-augmented maps enable navigating to open-vocabulary goals specified as text
-              queries.
-            </div>
-          </div>
-        </div>
-      </div>
+  <section class="section">
+    <div class="container">
+      <h2 class="title is-3">Experiments</h2>
+      <p>CSA surpasses CLIP in efficiency, using pre-trained unimodal encoders to map features with remarkable data efficiency.</p>
+      <img src="./static/images/csa_results.png" alt="CSA Results" style="width:100%">
     </div>
   </section>
 
 
-
-
-
-
-<br><br><br><br>
-  <section class="section" style="width:90%; margin:auto; padding-bottom: 0; margin-bottom: 0; height: auto;">
-    <div class="columns is-centered">
-
-      <div class="column content">
-        <center>
-          <h2 class="title is-3">Language Augmented Topometric Maps</h2>
-          <div class="interpolation-image-wrapper-zero-shot">
-            <img class="clipped-splash1" src="./static/images/Gif1.gif" width="90%" />
-          </div>
-        </center>
-      </div>
-      <div class="column content">
-        <center>
-          <h2 class="title is-3">ALT-Pilot: Localizatioin</h2>
-          <div class="interpolation-image-wrapper-fine-grained">
-            <img src="./static/images/Gif2.gif" width="90%" />
-          </div>
-        </center>
-      </div> 
-    </div>
-  </section>
-
-  <section class="section" style="width:90%; margin:auto; padding-bottom: 0; margin-bottom: 0; height: auto;">
-    <div class="columns is-centered">
-
-      <div class="column content">
-        <center>
-          <h2 class="title is-3">ALT-Pilot: Global Localization</h2>
-          <div class="interpolation-image-wrapper-zero-shot">
-            <img src="./static/images/Gif4.gif" width="90%" />
-          </div>
-        </center>
-      </div>
-      <div class="column content">
-        <center>
-          <h2 class="title is-3">Language Guided Navigation</h2>
-          <div class="interpolation-image-wrapper-fine-grained">
-            <img src="./static/images/Gif5.gif" width="90%" />
-          </div>
-        </center>
-      </div> 
-    </div>
-  </section>
-
-
-<br><br><br>
-  <section>
-    <div class="container is-max-desktop">
-      <!-- Paper video. -->
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Video</h2>
-          <div class="publication-video">
-            <iframe src="https://www.youtube.com/embed/sw7MuZs1q-0?si=Hbq0gVzY183eUXDK" frameborder="0"
-              allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-
-  <br><br>
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX | ToBeAdded</h2>
-      <!-- <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
-}</code></pre> -->
-    </div>
-  </section>
-
+  <div class="container is-max-desktop content" style="text-align: left;">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{
+      li2025csa,
+      title={{CSA}: Data-efficient Mapping of Unimodal Features to Multimodal Features},
+      author={Po-han Li and Sandeep P. Chinchali and Ufuk Topcu},
+      booktitle={The Thirteenth International Conference on Learning Representations},
+      year={2025},
+      url={https://openreview.net/forum?id=6Mg7pjG7Sw}
+}
+    </code></pre>
+  </div>
 
   <footer class="footer">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-8">
-          <div class="content">
-            <p>
-              This website is licensed under a <a rel="license"
-                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-                Commons Attribution-ShareAlike 4.0 International License</a>.
-            </p>
-            <p>
-              This means you are free to borrow the <a href="https://github.com/nerfies/nerfies.github.io">source
-                code</a> of this website,
-              we just ask that you link back to this page in the footer.
-              Please remember to remove the analytics code included in the header of the website which
-              you do not want on your website.
-            </p>
-          </div>
-        </div>
-      </div>
+    <div class="content has-text-centered">
+      <p>Website template borrowed from <a href="""https://nerfies.github.io/">Nerfies</a>. Licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</p>
     </div>
   </footer>
-
 </body>
 
-</html>
+</html></div>
